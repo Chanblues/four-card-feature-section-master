@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+h1, h3 {
+    color: hsl(234, 12%, 34%);
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+}
+
+#header {
+    text-align: center;
+    margin: 70px ;
+}
+
+#header p {
+    margin: 0.7rem 34.5% 0 34.5%;
+}
+
+#grid {
+    margin: 30px auto;
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    grid-template-areas: '. build .'
+                         'super build calc'
+                         'super karma calc'
+                         '. karma .';
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 200px;
+    padding: 25px;
+    border-radius: 7px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 0.625rem;
+    margin-top: 0.6rem;
+}
+
+img {
+    display: block;
+    width: 20%;
+    align-self: flex-end;
+}
+
+.cyan {    
+    border-top: 3px solid hsl(180, 62%, 55%);
+    grid-area: super;
+}
+.red {    
+    border-top: 3px solid hsl(0, 78%, 62%);
+    grid-area: build;
+}
+.orange {    
+    border-top: 3px solid hsl(34, 97%, 64%);
+    grid-area: karma;
+}
+.blue {    
+    border-top: 3px solid hsl(212, 86%, 64%);
+    grid-area: calc;
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 959px) {
+    #grid {
+        grid-template-areas: 'super' 'build' 'karma' 'calc';
+    }
+
+    #header {
+        margin: 70px 1rem auto 1rem;
+    }
+
+    #header p {
+        margin: 0.7rem 1rem 0 1rem;
+    }
+}
